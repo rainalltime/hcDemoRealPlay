@@ -22,7 +22,7 @@ void main() {
 		return;
 	}
 	NET_DVR_PLAYCOND struDownloadCond = { 0 };
-	struDownloadCond.dwChannel = 1; //通道号
+	struDownloadCond.dwChannel = 33; //通道号
 	struDownloadCond.struStartTime.dwYear = 2017; //开始时间
 	struDownloadCond.struStartTime.dwMonth = 11;
 	struDownloadCond.struStartTime.dwDay = 22;
@@ -74,7 +74,8 @@ void main() {
 		NET_DVR_Logout(lUserID);
 		NET_DVR_Cleanup();
 		return;
-	}printf("Be downloading... %d %%\n", nPos);
+	}
+	printf("Be downloading... %d %%\n", nPos);
 	//注销用户
 	NET_DVR_Logout(lUserID);
 	//释放 SDK 资源
